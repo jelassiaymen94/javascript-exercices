@@ -10,8 +10,8 @@ console.log(typeof +"10" == typeof 10);
 
 console.log(parseFloat("9.8") == 9.8);
 
-console.log("python".search("on"));
-console.log("jargon".search("on"));
+console.log("python".includes("on"));
+console.log("jargon".includes("on"));
 
 console.log("I hope this course is not full of jargon".search("jargon"));
 
