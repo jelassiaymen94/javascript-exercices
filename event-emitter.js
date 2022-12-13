@@ -10,6 +10,11 @@ The first event should be emitted immediately after the EventEmitter is created.
 
 function createEE(opts) {
 	const ee = new EventEmitter();
+
+	// Listen for the "data" event and execute the provided callback function
+	// only once.
+	ee.once("data", opts.callback);
+
 	let intervalId = setInterval(() => {
 		try {
 			ee.emit("data", opts.fn());
